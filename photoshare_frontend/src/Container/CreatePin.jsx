@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import { client } from "../Client";
 import { categories } from "../utils/data";
 export default function CreatePin(props) {
-  console.log(categories);
   const { user } = props;
-  console.log("++++++", { user });
 
   const [title, setTitle] = useState("");
   const [about, setAbout] = useState("");

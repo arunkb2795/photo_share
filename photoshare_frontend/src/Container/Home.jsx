@@ -5,8 +5,10 @@ export default function Home() {
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <button onClick={() => navigate("/")}>Logo</button>
-        <button onClick={() => navigate("profile")}>User Profile</button>
+        <button onClick={() => navigate("/")}>
+          <h2 className="font-bold text-lg p-2">PhotoShare</h2>
+        </button>
+        <button onClick={() => navigate("profile")}></button>
       </div>
       <Outlet />
     </div>

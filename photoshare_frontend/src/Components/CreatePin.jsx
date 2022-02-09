@@ -3,7 +3,6 @@ import { Routes, Route, useParams } from "react-router-dom";
 import { client } from "../Client";
 import { feedQuery, searchQuery, categories } from "../utils/data";
 export default function CreatePin(props) {
-  console.log(categories);
   const { user } = props;
 
   const [title, setTitle] = useState("");

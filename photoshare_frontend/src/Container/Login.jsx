@@ -25,7 +25,7 @@ export default function Login() {
     <div className="flex flex-col justify-center items-center h-screen">
       <div className="shadow-2xl">
         <GoogleLogin
-          clientId={process.env.REACT_APP_GOOGLE_TOKEN}
+          clientId="1084485189932-uu6uh83aa84339q5pk1l51i3jpqss6s1.apps.googleusercontent.com"
           render={(renderProps) => (
             <button
               type="button"

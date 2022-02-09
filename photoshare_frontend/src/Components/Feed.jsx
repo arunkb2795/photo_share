@@ -3,7 +3,6 @@ import { Routes, Route, useParams } from "react-router-dom";
 import { client } from "../Client";
 import { feedQuery, searchQuery, categories } from "../utils/data";
 export default function Feed(props) {
-  console.log(categories);
   const { user } = props;
 
   const [title, setTitle] = useState("");
@@ -16,7 +15,6 @@ export default function Feed(props) {
 
   const fetchDetails = () => {
     client.fetch(feedQuery).then((data) => {
-      console.log({ data }, { user });
       setDetails(data);
     });
   };
