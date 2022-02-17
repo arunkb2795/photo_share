@@ -6,8 +6,16 @@ module.exports = {
       fontFamily: {
         sans: ["Lato", "sans-serif"],
       },
+      colors: {
+        "real-pink": "#FF5733",
+        "shade-pink": "#FFDDD6",
+      },
       margin: {
         320: "320px",
+      },
+      fontSize: {
+        14: "0.875rem",
+        16: "1rem",
       },
       width: {
         190: "190px",
@@ -20,7 +28,10 @@ module.exports = {
         508: "508px",
       },
       height: {
+        32: "32px",
+        42: "42px",
         80: "80px",
+        250: "250px",
         340: "340px",
         370: "370px",
         420: "420px",
@@ -48,45 +59,13 @@ module.exports = {
         navColor: "#BEBEBE",
       },
       backgroundColor: {
-        mainColor: "#FBF8F9",
+        mainColor: "#FF5733",
         secondaryColor: "#F0F0F0",
         blackOverlay: "rgba(0, 0 ,0 ,0.7)",
       },
-      keyframes: {
-        "slide-in": {
-          "0%": {
-            "-webkit-transform": "translateX(-200px)",
-            transform: "translateX(-200px)",
-          },
-          "100%": {
-            "-webkit-transform": "translateX(0px)",
-            transform: "translateX(0px)",
-          },
-        },
-
-        "slide-fwd": {
-          "0%": {
-            "-webkit-transform": "translateZ(0px)",
-            transform: "translateZ(0px)",
-          },
-          "100%": {
-            "-webkit-transform": "translateZ(160px)",
-            transform: "translateZ(160px)",
-          },
-        },
+      borderRadius: {
+        4: "4px",
       },
-      animation: {
-        "slide-in": "slide-in 0.5s ease-out",
-        "slide-fwd":
-          " slide-fwd 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
-      },
-      transitionProperty: {
-        height: "height",
-      },
-    },
-    cursor: {
-      "zoom-in": "zoom-in",
-      pointer: "pointer",
     },
   },
   variants: {

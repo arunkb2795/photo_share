@@ -12,9 +12,10 @@ const breakpointColumnsObj = {
 };
 
 export default function Layout(props) {
-  const { options, user, handleDelete, handleLike } = props;
+  const { options, user, handlePinClick, handleDelete, handleLike } = props;
   const [like, setLike] = useState(null);
   console.log({ options, user });
+
   return (
     <Masonry
       className="flex animate-slide-fwd"
@@ -25,6 +26,10 @@ export default function Layout(props) {
           <div key={item._id}>
             <div className="relative m-2 ">
               <div
+                className="absolute h-full w-full"
+                onClick={() => handlePinClick(item._id)}
+              ></div>
+              <div
                 className="absolute bottom-0 p-3 flex w-full rounded-md"
                 style={{
                   background:
@@ -34,13 +39,17 @@ export default function Layout(props) {
                 <AvatarWithDetails
                   name={item.postedBy.userName}
                   image={item.postedBy.image}
+                  textColor={"text-white"}
                 />
                 <button
                   className="ml-auto"
                   onClick={() => handleDelete(item._id)}
                 >
-                  {/* Delete */}
+                  Delete
                 </button>
+                {item.save?.length > 0 ? (
+                  <h3 className="text-white	p-2">{item.save?.length} Likes</h3>
+                ) : null}
                 <button onClick={() => handleLike(item._id)}>
                   {item.save?.filter((i) => i.postedBy._id === user?.googleId)
                     .length > 0 ? (

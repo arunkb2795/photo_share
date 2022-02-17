@@ -29,7 +29,7 @@ export default function Login() {
           render={(renderProps) => (
             <button
               type="button"
-              className="bg-mainColor flex justify-center items-center p-2"
+              className="bg-white flex justify-center items-center p-2"
               onClick={renderProps.onClick}
             >
               <FcGoogle className="mr-4" />
